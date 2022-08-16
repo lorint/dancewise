@@ -1,8 +1,8 @@
 @use 'bootstrap/dist/css/bootstrap';
 
-// .navbar {
-//   background-color: plum !important;
-// }
+.navbar {
+  background-color: #001011 !important;
+}
 
 #home-container {
   margin-top: 25px;
@@ -192,6 +192,10 @@ h5 {
   display: block;
 }
 
+a.dropdown-item {
+  color: #001011 !important;
+}
+
 .form-style {
   margin-bottom: 200px;
   width: 100%;
@@ -324,4 +328,70 @@ p.help-text {
   flex-wrap: wrap;
 }
 
+.home-button-orange {
+  appearance: none;
+  backface-visibility: hidden;
+  background-color: #ff7f11;
+  border-radius: 8px;
+  border-style: none;
+  box-shadow: rgba(39, 174, 96, 0.15) 0 4px 9px;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Inter, -apple-system, system-ui, 'Segoe UI', Helvetica, Arial,
+    sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: normal;
+  line-height: 1.5;
+  outline: none;
+  overflow: hidden;
+  padding: 13px 20px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transform: translate3d(0, 0, 0);
+  transition: all 0.3s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: top;
+  white-space: nowrap;
+}
 
+.home-button-red {
+  appearance: none;
+  backface-visibility: hidden;
+  background-color: #bd1e1e;
+  border-radius: 8px;
+  border-style: none;
+  box-shadow: rgba(39, 174, 96, 0.15) 0 4px 9px;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Inter, -apple-system, system-ui, 'Segoe UI', Helvetica, Arial,
+    sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: normal;
+  line-height: 1.5;
+  outline: none;
+  overflow: hidden;
+  padding: 13px 20px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transform: translate3d(0, 0, 0);
+  transition: all 0.3s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: top;
+  white-space: nowrap;
+}
+
+a:visited {
+  color: #f2f2f2 !important;
+}
