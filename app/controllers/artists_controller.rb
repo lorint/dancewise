@@ -7,6 +7,7 @@ class ArtistsController < ApplicationController
   before_action :set_artist, only: %i[show update edit destroy]
   before_action :require_user, except: %i[show index]
 
+
   # One of of the changes I made to fix the some of the errors was on line 12 to change @artists to Artist.
 
   def index
@@ -70,7 +71,7 @@ class ArtistsController < ApplicationController
 
   private
     def artist_params
-      params.require(:artist).permit(:name, :description, :image_url, :avatar, :instructor, :dj, :first_video_id, :second_video_id, :third_video_id, :artist_status_id,
+      params.require(:artist).permit(:name, :description, :image_url, :avatar, :instructor, :dj, :first_video_id, :second_video_id, :third_video_id, :artist_status_id, :user_id,
                                  dance_style_ids: [], event_ids: [])
     end
 

@@ -5,7 +5,7 @@ require "i18n"
 require "date"
 
 class Event < ApplicationRecord
-  belongs_to :user
+  belongs_to :user, optional: true
   has_rich_text :description
   has_many :event_dance_styles
   has_many :dance_styles, through: :event_dance_styles
