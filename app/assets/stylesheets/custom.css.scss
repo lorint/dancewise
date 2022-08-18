@@ -126,26 +126,14 @@
   margin-right: auto;
 }
 
-.event-page-image {
+.event-index-image {
   width: 100%;
   aspect-ratio: 16 / 9;
   object-fit: cover;
   border-radius: 10px;
   margin-top: 10px;
   margin-bottom: 20px;
-
-  @media (min-width: 43em) {
-    width: 100%;
-    align: center;
-  }
-
-  @media (min-width: 62em) {
-    width: 60%;
-  }
-
-  @media (min-width: 82em) {
-    width: 50%;
-  }
+  
 }
 
 .event-show-date {
@@ -266,21 +254,25 @@ h5 {
   }
 }
 
-.show-event {
+.event-show-image {
   width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
 
   @media (min-width: 43em) {
     width: 100%;
-    flex-grow: 2;
+    align: center;
   }
 
   @media (min-width: 62em) {
-    width: 100%;
-    flex-grow: 3;
+    width: 60%;
   }
 
   @media (min-width: 82em) {
-    width: 100%;
+    width: 50%;
   }
 }
 

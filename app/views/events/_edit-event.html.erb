@@ -2,8 +2,8 @@
   <%= bootstrap_form_for(@event, data: { controller: "places", action: "google-maps-callback@window->places#initMap" }) do |f| %>
     <%= f.text_field :name, placeholder: 'Enter the name of the event here', label: "What is the name of this event?" %>
     <%= f.rich_text_area :description, placeholder: 'Enter the description of the event here', label: "Tell us about the event." %>
-    <% if event.event_image.attached? %>
-       <%= image_tag event.event_image, class: "event-page-image" %>
+    <% if @event.event_image.attached? %>
+       <%= image_tag @event.event_image, class: "event-show-image" %>
     <% else %>
        <p style= "font-weight:bold">No event image has been uploaded.</p>
     <% end %>
