@@ -10,8 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_08_18_004216) do
-
+ActiveRecord::Schema[7.0].define(version: 2022_08_18_004216) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -20,8 +19,8 @@ ActiveRecord::Schema.define(version: 2022_08_18_004216) do
     t.text "body"
     t.string "record_type", null: false
     t.bigint "record_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["record_type", "record_id", "name"], name: "index_action_text_rich_texts_uniqueness", unique: true
   end
 
@@ -30,7 +29,7 @@ ActiveRecord::Schema.define(version: 2022_08_18_004216) do
     t.string "record_type", null: false
     t.bigint "record_id", null: false
     t.bigint "blob_id", null: false
-    t.datetime "created_at", null: false
+    t.datetime "created_at", precision: nil, null: false
     t.index ["blob_id"], name: "index_active_storage_attachments_on_blob_id"
     t.index ["record_type", "record_id", "name", "blob_id"], name: "index_active_storage_attachments_uniqueness", unique: true
   end
@@ -43,7 +42,7 @@ ActiveRecord::Schema.define(version: 2022_08_18_004216) do
     t.string "service_name", null: false
     t.bigint "byte_size", null: false
     t.string "checksum", null: false
-    t.datetime "created_at", null: false
+    t.datetime "created_at", precision: nil, null: false
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
@@ -56,39 +55,39 @@ ActiveRecord::Schema.define(version: 2022_08_18_004216) do
   create_table "articles", force: :cascade do |t|
     t.string "title"
     t.text "description"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", precision: nil
+    t.datetime "updated_at", precision: nil
     t.integer "user_id"
   end
 
   create_table "artist_dance_styles", force: :cascade do |t|
     t.integer "artist_id"
     t.integer "dance_style_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "artist_status", force: :cascade do |t|
     t.string "status"
     t.bigint "event_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["event_id"], name: "index_artist_status_on_event_id"
   end
 
   create_table "artist_statuses", force: :cascade do |t|
     t.string "status"
     t.integer "artist_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "artists", force: :cascade do |t|
     t.string "name"
     t.string "description"
     t.string "image_url"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.boolean "instructor", default: false
     t.boolean "dj", default: false
     t.string "first_video_id"
@@ -101,8 +100,8 @@ ActiveRecord::Schema.define(version: 2022_08_18_004216) do
 
   create_table "dance_styles", force: :cascade do |t|
     t.string "name"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "event_artists", force: :cascade do |t|
@@ -117,29 +116,29 @@ ActiveRecord::Schema.define(version: 2022_08_18_004216) do
 
   create_table "event_frequencies", force: :cascade do |t|
     t.string "name"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "event_status", force: :cascade do |t|
     t.string "status"
     t.bigint "event_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["event_id"], name: "index_event_status_on_event_id"
   end
 
   create_table "event_statuses", force: :cascade do |t|
     t.string "status"
     t.integer "event_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "event_types", force: :cascade do |t|
     t.string "name"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "events", force: :cascade do |t|
@@ -147,10 +146,10 @@ ActiveRecord::Schema.define(version: 2022_08_18_004216) do
     t.string "description"
     t.string "image_url"
     t.integer "user_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.datetime "event_start_date"
-    t.datetime "event_end_date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.datetime "event_start_date", precision: nil
+    t.datetime "event_end_date", precision: nil
     t.bigint "event_type_id", default: 1
     t.bigint "event_frequency_id", null: false
     t.string "address"
@@ -176,8 +175,8 @@ ActiveRecord::Schema.define(version: 2022_08_18_004216) do
   create_table "users", force: :cascade do |t|
     t.string "username"
     t.string "email"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.string "password_digest"
     t.boolean "admin", default: false
   end
