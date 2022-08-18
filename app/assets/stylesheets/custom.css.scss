@@ -133,6 +133,20 @@
   border-radius: 10px;
   margin-top: 10px;
   margin-bottom: 20px;
+
+  @media (min-width: 43em) {
+    width: 100%;
+    align: center;
+  }
+
+  @media (min-width: 62em) {
+    width: 60%;
+  }
+
+  @media (min-width: 82em) {
+    width: 50%;
+  }
+
 }
 
 .event-show-date {
