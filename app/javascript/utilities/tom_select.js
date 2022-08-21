@@ -1,32 +1,30 @@
 import 'tom-select';
 import TomSelect from 'tom-select';
 
-document.addEventListener('turbolinks:load', () => {
-  const selectInput = document.getElementById('select-dancestyle');
-  if (selectInput) {
-    new TomSelect(selectInput, {
-      plugins: {
-        remove_button: { title: 'Remove this item' },
-      },
-      onItemAdd: function() {
-        this.setTextboxValue('');
-        this.refreshOptions();
-      },
-    });
-  }
-});
+console.log('Tom Select JS is connected.');
 
-document.addEventListener('turbolinks:load', () => {
-  const selectInput = document.getElementById('select-artist');
-  if (selectInput) {
-    new TomSelect(selectInput, {
-      plugins: {
-        remove_button: { title: 'Remove this artist' },
-      },
-      onItemAdd: function() {
-        this.setTextboxValue('');
-        this.refreshOptions();
-      },
-    });
-  }
-});
+const selectDancestyle = document.getElementById('select-dancestyle');
+if (selectDancestyle) {
+  new TomSelect(selectDancestyle, {
+    plugins: {
+      remove_button: { title: 'Remove this item' },
+    },
+    onItemAdd: function() {
+      this.setTextboxValue('');
+      this.refreshOptions();
+    },
+  });
+}
+
+const selectArtist = document.getElementById('select-artist');
+if (selectArtist) {
+  new TomSelect(selectArtist, {
+    plugins: {
+      remove_button: { title: 'Remove this artist' },
+    },
+    onItemAdd: function() {
+      this.setTextboxValue('');
+      this.refreshOptions();
+    },
+  });
+}
