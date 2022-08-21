@@ -1,9 +1,9 @@
-// Load all the controllers within this directory and all subdirectories.
-// Controller files must be named *_controller.js.
+// Import and register all your controllers from the importmap under controllers/*
 
-import { Application } from 'stimulus';
-import { definitionsFromContext } from 'stimulus/webpack-helpers';
+import { application } from "./application"
 
-const application = Application.start();
-const context = require.context('controllers', true, /_controller\.js$/);
-application.load(definitionsFromContext(context));
+import SelectController from "./select_controller"
+application.register("select", SelectController)
+
+import PlacesController from "./places_controller"
+application.register("places", PlacesController)

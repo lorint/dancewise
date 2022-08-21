@@ -6,21 +6,20 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '3.0.2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
-gem "rails", "~> 7.0.0"
+gem "rails", "~> 7.0.3"
 # Use Puma as the app server
 gem 'puma', '~> 5.0'
 # Use SCSS for stylesheets
 gem 'sass-rails', '>= 6'
-# Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
-gem 'webpacker', '~> 4.0'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
-gem 'turbolinks', '~> 5'
+gem 'turbo-rails'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.7'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
 gem 'bcrypt', '~> 3.1.7'
+
 
 gem 'pry'
 gem 'will_paginate', '~> 3.3'
@@ -36,10 +35,14 @@ gem 'filterrific'
 gem 'geocoder'
 gem 'ransack'
 gem "aws-sdk-s3", require: false 
+gem 'bootstrap'
 gem "bootstrap_form", "~> 5.0"
 gem 'faker'
 gem 'jquery-rails'
 gem 'figaro'
+gem 'jsbundling-rails'
+gem 'cssbundling-rails'
+gem 'stimulus-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -81,3 +84,5 @@ group :development, :test do
   gem 'rubocop-packaging', require: false
   gem 'rubocop-performance', require: false
 end
+
+gem "importmap-rails", "~> 1.1"

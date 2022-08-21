@@ -1,10 +1,11 @@
 import 'tom-select';
 import TomSelect from 'tom-select';
 
-document.addEventListener('turbolinks:load', () => {
-  const selectInput = document.getElementById('select-dancestyle');
-  if (selectInput) {
-    new TomSelect(selectInput, {
+console.log("Tom Select JS is connected.")
+
+  const selectDancestyle = document.getElementById('select-dancestyle');
+  if (selectDancestyle) {
+    new TomSelect(selectDancestyle, {
       plugins: {
         remove_button: { title: 'Remove this item' },
       },
@@ -13,13 +14,11 @@ document.addEventListener('turbolinks:load', () => {
         this.refreshOptions();
       },
     });
-  }
-});
+  };
 
-document.addEventListener('turbolinks:load', () => {
-  const selectInput = document.getElementById('select-artist');
-  if (selectInput) {
-    new TomSelect(selectInput, {
+  const selectArtist = document.getElementById('select-artist');
+  if (selectArtist) {
+    new TomSelect(selectArtist, {
       plugins: {
         remove_button: { title: 'Remove this artist' },
       },
@@ -28,5 +27,4 @@ document.addEventListener('turbolinks:load', () => {
         this.refreshOptions();
       },
     });
-  }
-});
+  };
