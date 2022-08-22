@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   get '/suggest_event', to: 'events#suggest_event', as: 'suggest_event'
   get '/suggest_artist', to: 'artists#suggest_artist', as: 'suggest_artist'
   get 'login', to: 'sessions#new'
+  get '/logout', to: 'sessions#destroy', as: 'logout'
   post 'login', to: 'sessions#create'
   delete 'logout', to: 'sessions#destroy'
   resources :dance_styles, except: [:destroy]
