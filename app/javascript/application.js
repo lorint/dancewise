@@ -6,7 +6,6 @@ import 'trix';
 import '@rails/actiontext';
 import 'tom-select';
 
-
 require('./utilities/tom_select');
 
 window.initMap = function(...args) {
