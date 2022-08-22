@@ -392,8 +392,7 @@
   },
   "devDependencies": {
     "@types/bootstrap": "^5.2.2",
-    "esbuild": "^0.15.5",
-    "esbuild-darwin-64": "^0.15.5"
+    "esbuild": "^0.15.5"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
