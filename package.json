@@ -139,7 +139,6 @@
     "from2": "^2.3.0",
     "fs-write-stream-atomic": "^1.0.10",
     "fs.realpath": "^1.0.0",
-    "fsevents": "^2.3.2",
     "get-caller-file": "^2.0.5",
     "get-stream": "^3.0.0",
     "get-value": "^2.0.6",
