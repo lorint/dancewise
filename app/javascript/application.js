@@ -1,10 +1,11 @@
 // Entry point for the build script in your package.json
+import * as bootstrap from 'bootstrap';
+import '@hotwired/turbo-rails';
 import './controllers';
-import 'tom-select';
 import 'trix';
 import '@rails/actiontext';
-import '@hotwired/turbo-rails';
-import * as bootstrap from 'bootstrap';
+import 'tom-select';
+
 
 require('./utilities/tom_select');
 
