@@ -18,7 +18,7 @@ Rails.start();
 Turbolinks.start();
 ActiveStorage.start();
 
-window.initMap = function(...args) {
+window.initMap = function (...args) {
   const event = document.createEvent('Events');
   event.initEvent('google-maps-callback', true, true);
   event.args = args;

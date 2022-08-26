@@ -9,7 +9,7 @@ if (selectDancestyle) {
     plugins: {
       remove_button: { title: 'Remove this item' },
     },
-    onItemAdd: function() {
+    onItemAdd: function () {
       this.setTextboxValue('');
       this.refreshOptions();
     },
@@ -22,7 +22,7 @@ if (selectArtist) {
     plugins: {
       remove_button: { title: 'Remove this artist' },
     },
-    onItemAdd: function() {
+    onItemAdd: function () {
       this.setTextboxValue('');
       this.refreshOptions();
     },
