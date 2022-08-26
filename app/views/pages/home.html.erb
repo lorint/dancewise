@@ -6,9 +6,19 @@
 
 
 
-  <div class="button-wrapper d-grid">
+  <div class="button-wrapper d-grid data-control-wrapper">
+  <div class="btn btn-dark d-gridgap-2">
+  <%= link_to 'Login!', login_path, :class => "btn text-light" %>
+    </div>
+    <br>
+    <br>
    <div class="btn btn-success d-gridgap-2">
-  <%= link_to 'Sign up page', signup_path, :class => "btn text-light" %>
+  <%= link_to 'Sign up!', signup_path, :class => "btn text-light" %>
+    </div>
+    <br>
+    <br>
+    <div class="btn btn-primary gap-2">
+  <%= link_to 'View Events', events_path, :class => "btn text-light" %>
     </div>
     <br>
     <br>
@@ -17,9 +27,6 @@
     </div>
     <br>
     <br>
-    <div class="btn btn-primary gap-2">
-  <%= link_to 'Events listing', events_path, :class => "btn text-light" %>
-    </div>
 </div>
 </div>
 </div>
