@@ -13,8 +13,7 @@ import 'bootstrap';
 import 'tom-select';
 
 require('utilities/tom_select');
-require('trix');
-require('@rails/actiontext');
+
 
 Rails.start();
 Turbolinks.start();

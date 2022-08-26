@@ -42,7 +42,7 @@ gem 'jsbundling-rails'
 gem 'cssbundling-rails'
 gem 'stimulus-rails'
 gem 'turbo-rails'
-gem 'trix-rails', require: 'trix'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

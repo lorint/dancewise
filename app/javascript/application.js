@@ -2,8 +2,6 @@
 import * as bootstrap from 'bootstrap';
 import '@hotwired/turbo-rails';
 import './controllers';
-import 'trix';
-import '@rails/actiontext';
 import 'tom-select';
 
 require('./utilities/tom_select');
