@@ -4,6 +4,11 @@
 //   background-color: plum !important;
 // }
 
+@font-face {
+  font-family: 'Poppins';
+  src: asset-url('fonts/Poppins-Regular.ttf');
+}
+
 #home-container {
   margin-top: 25px;
 }
@@ -144,7 +149,7 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: "Poppins-Bold";
+  font-family: 'Poppins-Bold';
 }
 
 .data-control-wrapper {
@@ -405,7 +410,4 @@ p.help-text {
   }
 }
 
-@font-face {
-  font-family: 'Poppins';
-  src: url('Poppins-Regular.ttf');
-}
+
