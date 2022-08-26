@@ -5,8 +5,8 @@ Turbo.session.drive = false;
 import './controllers';
 import 'tom-select';
 
-var Turbolinks = require("turbolinks")
-Turbolinks.start()
+var Turbolinks = require('turbolinks');
+Turbolinks.start();
 
 require('./utilities/tom_select');
 
