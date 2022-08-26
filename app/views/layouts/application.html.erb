@@ -18,8 +18,24 @@
       <link href="https://cdn.jsdelivr.net/npm/tom-select/dist/css/tom-select.css" rel="stylesheet">
       <script src="https://cdn.jsdelivr.net/npm/tom-select/dist/js/tom-select.complete.min.js"></script>
 
-      <link rel="stylesheet" type="text/css" href="trix.css">
-      <script type="text/javascript" src="trix.js"></script>
+       <script src="https://cdn.tiny.cloud/1/bgu49ldm472gnpgcdgcl2lf5xmiug9mqru8566yvq9n247zw/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+        <script>
+          tinymce.init({
+            selector: '.tinymce',
+            height: 500,
+            menubar: false,
+            plugins: [
+              'advlist autolink lists link image charmap print preview anchor',
+              'searchreplace visualblocks code fullscreen',
+              'insertdatetime media table paste code help wordcount'
+            ],
+              toolbar: 'undo redo | formatselect | ' +
+              ' bold italic backcolor | alignleft aligncenter ' +
+              ' alignright alignjustify | bullist numlist outdent indent | ' +
+              ' removeformat | help'
+          });
+ </script>
+
     
           
     </head>
