@@ -14,7 +14,6 @@ import 'tom-select';
 
 require('utilities/tom_select');
 
-
 Rails.start();
 Turbolinks.start();
 ActiveStorage.start();
