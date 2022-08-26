@@ -357,7 +357,6 @@
     "to-regex-range": "^5.0.1",
     "tom-select": "^2.1.0",
     "tty-browserify": "^0.0.1",
-    "turbolinks": "^5.2.0",
     "typedarray": "^0.0.6",
     "union-value": "^2.0.1",
     "unique-filename": "^2.0.1",

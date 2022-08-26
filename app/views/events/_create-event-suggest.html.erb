@@ -8,13 +8,13 @@
     <%= f.collection_select :event_type_id, EventType.all, :id, :name, label: "What type of event is this?" %>
     <%= f.select :dance_style_ids, DanceStyle.all.pluck(:name, :id), 
           { label: "What are the main dance styles that will be represented at this event?", 
-             help: "Select the main dance styles that will be represented in the classes and/or socials."}, 
-          { multiple: true, id: "select-dancestyle" } %>
+             help: "Select the main dance styles that will be represented in the classes and/or socials." }, 
+          { multiple: true, id: "select-dancestyle", placeholder: "Enter the name of a dance style to begin searching..." } %>
      <%= f.collection_select :event_frequency_id, EventFrequency.all, :id, :name, label: "How often will this event occur?" %>
     <%= f.select :artist_ids, Artist.all.pluck(:name, :id), 
           { label: "Which artists have been booked for this event?", 
              help: "Select the artists that will be represented in the classes and/or socials."}, 
-          { multiple: true, id: "select-artist" } %>
+          { multiple: true, id: "select-artist", placeholder: "Enter the name of an artist to begin searching..." } %>
     <%= f.date_field :event_start_date, wrapper: { class: "date"}, label: "What date does this event start?", required: true %>
     </div>
     

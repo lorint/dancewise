@@ -42,6 +42,7 @@ gem 'jsbundling-rails'
 gem 'cssbundling-rails'
 gem 'stimulus-rails'
 gem 'turbo-rails'
+gem 'turbolinks', '~> 5.2.0'
 
 
 group :development, :test do

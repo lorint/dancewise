@@ -5,6 +5,8 @@
       <%= csrf_meta_tags %>
       <%= csp_meta_tag %>
 
+      <meta name="turbo-visit-control" content="reload">
+
       <%= stylesheet_link_tag 'application', media: 'all', "data-turbo-track": 'reload' %>
       <%= stylesheet_link_tag 'custom.css', media: 'all', "data-turbo-track": 'reload' %>
       <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>  
@@ -12,7 +14,7 @@
 
       <meta name="viewport" content="width=device-width,initial-scale=1">
             
-      <script async="false" type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=<%= Rails.application.credentials.dig(:google, :maps_api_key) %>&libraries=places&callback=initMap" async defer data-turbolinks-eval="false"></script>
+      <script async="false" type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=<%= Rails.application.credentials.dig(:google, :maps_api_key) %>&libraries=places&callback=initMap" async defer data-turbo-eval="false"></script>
       
 
       <link href="https://cdn.jsdelivr.net/npm/tom-select/dist/css/tom-select.css" rel="stylesheet">
