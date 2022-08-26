@@ -3,23 +3,21 @@
 
     <%= f.label "Event name" %>
     <%= f.search_field :name_cont, placeholder: "Name contains", class: "form-control" %> &emsp;
-     <br><br>
+     <br>
     <%= f.label :location %>
     <%= f.search_field :address_or_city_or_state_or_country_or_continent_cont_all, class: "form-control", placeholder: "Enter a contient, country, city, etc...", data: { target: "places.field" } %> &emsp;
-    <br><br>
+    <br>
     <%= f.label :dance_style %>
-    <%= f.select :dance_styles_id_eq, DanceStyle.all.pluck(:name, :id), {}, { :include_blank => "All dance styles", class: "form-select", id: "select-dancestyle", placeholder: "Choose a dance style..." } %> &emsp;
-    <br><br>
+    <%= f.select :dance_styles_id_eq, DanceStyle.all.pluck(:name, :id), { :include_blank => "All dance styles" }, { class: "form-select", id: "select-dancestyle", placeholder: "Choose a dance style..." } %> &emsp;
+    <br>
     <%= f.label "Event Type" %>
-    <%= f.select :event_type_id_eq, EventType.all.pluck(:name, :id), {}, { :include_blank => "All event types", class: "form-select", id: "select-artist", placeholder: "Choose an event type..." } %> &emsp;
+    <%= f.select :event_type_id_eq, EventType.all.pluck(:name, :id), { :include_blank => "All event types" }, { class: "form-select", id: "select-artist", placeholder: "Choose an event type..." } %> &emsp;
     <br>
-    <br>
-
-    <%= f.select(:event_month_eq, Date::MONTHNAMES[1..12], {:prompt => 'Select Month', include_blank: true}) %>
-
-    <%= f.select(:event_year_eq, Date.today.year-2 .. Date.today.year+3, {:prompt => 'Select Year', include_blank: true}) %>
-
-    <%= f.submit "Search!" %>
+    <%= f.select(:event_month_eq, (Date::MONTHNAMES[1..12]), { prompt: "Choose a month or leave blank for any month" }, { :include_blank => "Any month", class: "form-select" }) %>
+     <br>
+    <%= f.select :event_year_eq, Date.today.year-2 .. Date.today.year+3, { prompt: "Choose a year or leave black for any year" }, {:placeholder => 'Select Year', include_blank: true, class: "form-select"}  %>
+     <br>
+    <%= f.submit "Search!", class: "btn btn-dark btn-lg" %>
 <% end %>
 
 
