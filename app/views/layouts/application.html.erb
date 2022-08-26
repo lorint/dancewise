@@ -37,7 +37,8 @@
               ' removeformat | help'
           });
  </script>
-    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+   
+    <%= hotwire_livereload_tags if Rails.env.development? %>
 
     
           

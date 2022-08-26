@@ -2,5 +2,3 @@
 //= link_tree ../builds
 //= link application.js
 //= link custom.css
-
-//= require turbolinks 

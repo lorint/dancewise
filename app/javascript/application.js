@@ -1,9 +1,12 @@
 // Entry point for the build script in your package.json
 import * as bootstrap from 'bootstrap';
-import { Turbo } from "@hotwired/turbo-rails"
+import { Turbo } from '@hotwired/turbo-rails';
 Turbo.session.drive = false;
 import './controllers';
 import 'tom-select';
+
+var Turbolinks = require("turbolinks")
+Turbolinks.start()
 
 require('./utilities/tom_select');
 
