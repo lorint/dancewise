@@ -1,21 +1,23 @@
 <%= search_form_for @q,  
     data: { controller: "places", action: "google-maps-callback@window->places#initMap" } do |f| %>
 
-    <%= f.label "Event name" %>
-    <%= f.search_field :name_cont, placeholder: "Name contains", class: "form-control" %> &emsp;
+    <%= f.label "Event name", class: "form-label" %>
+    <%= f.search_field :name_cont, placeholder: "Any event", class: "form-control" %> &emsp;
      <br>
-    <%= f.label :location %>
-    <%= f.search_field :address_or_city_or_state_or_country_or_continent_cont_all, class: "form-control", placeholder: "Enter a contient, country, city, etc...", data: { target: "places.field" } %> &emsp;
+    <%= f.label "Geolocation", class: "form-label" %>
+    <%= f.search_field :address_or_city_or_state_or_country_or_continent_cont_all, class: "form-control", placeholder: "Search by continent, country, state/province/region, or city", data: { target: "places.field" } %> &emsp;
     <br>
-    <%= f.label :dance_style %>
-    <%= f.select :dance_styles_id_eq, DanceStyle.all.pluck(:name, :id), { :include_blank => "All dance styles" }, { class: "form-select", id: "select-dancestyle", placeholder: "Choose a dance style..." } %> &emsp;
+    <%= f.label "Dance style", class: "form-label" %>
+    <%= f.select :dance_styles_id_eq, DanceStyle.all.pluck(:name, :id), { :include_blank => "All dance styles" }, { class: "form-select", id: "select-dancestyle", placeholder: "Any dance style" } %> &emsp;
     <br>
-    <%= f.label "Event Type" %>
-    <%= f.select :event_type_id_eq, EventType.all.pluck(:name, :id), { :include_blank => "All event types" }, { class: "form-select", id: "select-artist", placeholder: "Choose an event type..." } %> &emsp;
+    <%= f.label "Event Type", class: "form-label" %>
+    <%= f.select :event_type_id_eq, EventType.all.pluck(:name, :id), { :include_blank => "All event types" }, { class: "form-select", id: "select-artist", placeholder: "Any event type" } %> &emsp;
     <br>
-    <%= f.select(:event_month_eq, (Date::MONTHNAMES[1..12]), { prompt: "Choose a month or leave blank for any month" }, { :include_blank => "Any month", class: "form-select" }) %>
+    <%= f.label "Month", class: "form-label" %>
+    <%= f.select(:event_month_eq, (Date::MONTHNAMES[1..12]), { prompt: "Any month" }, { :include_blank => "Any month", class: "form-select" }) %>
      <br>
-    <%= f.select :event_year_eq, Date.today.year-2 .. Date.today.year+3, { prompt: "Choose a year or leave black for any year" }, {:placeholder => 'Select Year', include_blank: true, class: "form-select"}  %>
+     <%= f.label "Year", class: "form-label" %>
+    <%= f.select :event_year_eq, Date.today.year-2 .. Date.today.year+3, { prompt: "Any year" }, {:placeholder => 'Select Year', include_blank: true, class: "form-select"}  %>
      <br>
     <%= f.submit "Search!", class: "btn btn-dark btn-lg" %>
 <% end %>
