@@ -167,7 +167,22 @@ h5 {
 .sorting-wrapper {
   margin-top: 20px;
   margin-bottom: 20px;
+  width: 100%;
+
+  @media (min-width: 43em) {
+    width: 80%;
+    align: center;
+  }
+
+  @media (min-width: 62em) {
+    width: 50%;
+  }
+
+  @media (min-width: 82em) {
+    width: 50%;
+  }
 }
+
 .avatar_small {
   width: 40px;
   height: 40px;

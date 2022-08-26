@@ -2,16 +2,16 @@
     data: { controller: "places", action: "google-maps-callback@window->places#initMap" } do |f| %>
 
     <%= f.label "Event name" %>
-    <%= f.search_field :name_cont, placeholder: "Name contains" %> &emsp;
-
+    <%= f.search_field :name_cont, placeholder: "Name contains", class: "form-control" %> &emsp;
+     <br><br>
     <%= f.label :location %>
-    <%= f.search_field :address_or_city_or_state_or_country_or_continent_cont_all, data: { target: "places.field" } %> &emsp;
-
+    <%= f.search_field :address_or_city_or_state_or_country_or_continent_cont_all, class: "form-control", placeholder: "Enter a contient, country, city, etc...", data: { target: "places.field" } %> &emsp;
+    <br><br>
     <%= f.label :dance_style %>
-    <%= f.collection_select :dance_styles_id_eq, DanceStyle.all, :id, :name, :multiple => true, :include_blank => "All dance styles" %> &emsp;
-
+    <%= f.select :dance_styles_id_eq, DanceStyle.all.pluck(:name, :id), {}, { :include_blank => "All dance styles", class: "form-select", id: "select-dancestyle", placeholder: "Choose a dance style..." } %> &emsp;
+    <br><br>
     <%= f.label "Event Type" %>
-    <%= f.collection_select :event_type_id_eq, EventType.all, :id, :name, :multiple => true, :include_blank => "All event types" %> &emsp;
+    <%= f.select :event_type_id_eq, EventType.all.pluck(:name, :id), {}, { :include_blank => "All event types", class: "form-select", id: "select-artist", placeholder: "Choose an event type..." } %> &emsp;
     <br>
     <br>
 
