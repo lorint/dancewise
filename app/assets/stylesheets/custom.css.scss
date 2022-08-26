@@ -4,10 +4,7 @@
 //   background-color: plum !important;
 // }
 
-@font-face {
-  font-family: 'Poppins';
-  src: asset-url('fonts/Poppins-Regular.ttf');
-}
+
 
 #home-container {
   margin-top: 25px;
@@ -142,6 +139,11 @@
 
 .event-show-date {
   display: flex;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: asset-url('fonts/Poppins-Regular.ttf') format('truetype');
 }
 
 h1,
