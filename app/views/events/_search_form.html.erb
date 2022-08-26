@@ -2,16 +2,16 @@
     data: { controller: "places", action: "google-maps-callback@window->places#initMap" } do |f| %>
 
     <%= f.label "Event name", class: "form-label" %>
-    <%= f.search_field :name_cont, placeholder: "Any event", class: "form-control" %> &emsp;
+    <%= f.search_field :name_cont, placeholder: "Any event", class: "form-control" %>
      <br>
     <%= f.label "Geolocation", class: "form-label" %>
-    <%= f.search_field :address_or_city_or_state_or_country_or_continent_cont_all, class: "form-control", placeholder: "Search by continent, country, state/province/region, or city", data: { target: "places.field" } %> &emsp;
+    <%= f.search_field :address_or_city_or_state_or_country_or_continent_cont_all, class: "form-control", placeholder: "Search by continent, country, state/province/region, or city", data: { target: "places.field" } %>
     <br>
     <%= f.label "Dance style", class: "form-label" %>
-    <%= f.select :dance_styles_id_eq, DanceStyle.all.pluck(:name, :id), { :include_blank => "All dance styles" }, { class: "form-select", id: "select-dancestyle", placeholder: "Any dance style" } %> &emsp;
+    <%= f.select :dance_styles_id_eq, DanceStyle.all.pluck(:name, :id), { :include_blank => "All dance styles" }, { class: "form-select", id: "select-dancestyle", placeholder: "Any dance style" } %>
     <br>
     <%= f.label "Event Type", class: "form-label" %>
-    <%= f.select :event_type_id_eq, EventType.all.pluck(:name, :id), { :include_blank => "All event types" }, { class: "form-select", id: "select-artist", placeholder: "Any event type" } %> &emsp;
+    <%= f.select :event_type_id_eq, EventType.all.pluck(:name, :id), { :include_blank => "All event types" }, { class: "form-select", id: "select-artist", placeholder: "Any event type" } %>
     <br>
     <%= f.label "Month", class: "form-label" %>
     <%= f.select(:event_month_eq, (Date::MONTHNAMES[1..12]), { prompt: "Any month" }, { :include_blank => "Any month", class: "form-select" }) %>

@@ -2,11 +2,11 @@
     <%= bootstrap_form_for(@artist) do |f| %>
       <%= f.text_field :name, placeholder: 'Enter the name of the artist here', label: "What is the name of this artist?", help: "Please use the artist's real name then - their artist name, if any. (i.e. Clark Kent - Superman)", required: true  %>
       <%= f.file_field :avatar, label: "Upload the artist image", help: "Upload a square image of artist, 600 X 600 pixels works best!" %>
-      <%= f.rich_text_area :description, placeholder: 'Enter the bio of the artist here', label: "Enter a bio about the artist.", required: true  %>
+      <%= f.text_area :description, placeholder: 'Enter the bio of the artist here', label: "Enter a bio about the artist.", :class => "tinymce", required: true  %>
       <%= f.select :dance_style_ids, DanceStyle.all.pluck(:name, :id), 
           { label: "What dance styles does this artist represent?", 
              help: "Select the main dance styles they teach if they are an instructor, and the main dance styles they play if they are a DJ."}, 
-          { multiple: true, id: "select-dancestyle" } %>
+          { multiple: true, id: "select-dancestyle", placeholder: "Enter a name of a dance style to begin searching..." } %>
       <%= f.label "Is this artist an instructor and/or DJ?" %>
       <div class="artist-form-checkbox">
         <%= f.check_box :instructor, label: "This artist is an instructor." %>
