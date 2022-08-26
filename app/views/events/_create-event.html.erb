@@ -1,8 +1,8 @@
 <div class="form-style">
+<div class="required-form" style="background-color: beige; padding: 20px; border-radius: 20px">
   <%= bootstrap_form_for(@event, data: { controller: "places", action: "google-maps-callback@window->places#initMap" }) do |f| %>
     <%= f.text_field :name, placeholder: 'Enter the name of the event here', label: "What is the name of this event?" %>
     <%= f.rich_text_area :description, placeholder: 'Enter the description of the event here', label: "Tell us about the event." %>
-        <%= f.file_field :event_image, label: "Upload the event image", help: "Upload a horizontal image of event flyer, 1920 X 1080 pixels works best!" %>
     <%= f.text_field :address, data: { target: "places.field" }, label: "Where is this event taking place?", required: true %>
     <%= f.collection_select :event_type_id, EventType.all, :id, :name, label: "What type of event is this?" %>
     <div class="field" data-controller="select">
@@ -17,6 +17,8 @@
     </div>
      <%= f.collection_select :event_frequency_id, EventFrequency.all, :id, :name, label: "How often will this event occur?" %>
     <%= f.date_field :event_start_date, wrapper: { class: "date"}, label: "What date does this event start?", required: true %>
+  </div>
+    <%= f.file_field :event_image, label: "Upload the event image", help: "Upload a horizontal image of event flyer, 1920 X 1080 pixels works best!" %>
     <%= f.date_field :event_end_date, wrapper: { class: "date"}, label: "What date does this event end?", help: "Enter the same date if this is a same day event." %>
     <%= f.text_field :website_url, placeholder: 'http://www.yourevent.com', label: "Does this event have a website?", help: "If the event has a website, enter the link here." %>
     <%= f.text_field :ticket_url, placeholder: 'http://yourticketsite.com/yourevent', label: "What is the link to purchase passes?", help: "If the event has a direct link to purchase passes, enter the link here." %>
@@ -25,4 +27,5 @@
     <%= f.collection_select :event_status_id, EventStatus.all, :id, :status, label: "What is the status of this event?" %>
     <%= f.submit "Create New Event", class: "btn btn-success" %>
   <% end %>
+
 </div>

@@ -1,11 +1,11 @@
 <%= search_form_for @q,  
     data: { controller: "places", action: "google-maps-callback@window->places#initMap" } do |f| %>
 
-      <%= f.label :location %>
+    <%= f.label "Event name" %>
     <%= f.search_field :name_cont, placeholder: "Name contains" %> &emsp;
 
     <%= f.label :location %>
- <%= f.search_field :address_or_city_or_state_or_country_or_continent_cont_all, data: { places_target: "field" } %>&emsp;
+    <%= f.search_field :address_or_city_or_state_or_country_or_continent_cont_all, data: { target: "places.field" } %> &emsp;
 
     <%= f.label :dance_style %>
     <%= f.collection_select :dance_styles_id_eq, DanceStyle.all, :id, :name, :multiple => true, :include_blank => "All dance styles" %> &emsp;

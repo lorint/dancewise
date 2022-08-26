@@ -1,11 +1,13 @@
 <div class="container" id="home-container">
-  <h1>Welcome to WhereToFuckingDance.com!</h1>
+  <div class="hero-wrapper">
+  <%= image_tag("WTF DANCE SITE SQUARE.png", class: "hero-image") %>
+  </div>
   <br><br><br>
 
 
 
-
-   <div class="btn btn-success gap-2">
+  <div class="button-wrapper d-grid">
+   <div class="btn btn-success d-gridgap-2">
   <%= link_to 'Sign up page', signup_path, :class => "btn text-light" %>
     </div>
     <br>
@@ -18,6 +20,7 @@
     <div class="btn btn-primary gap-2">
   <%= link_to 'Events listing', events_path, :class => "btn text-light" %>
     </div>
+</div>
 </div>
 </div>
 </div>

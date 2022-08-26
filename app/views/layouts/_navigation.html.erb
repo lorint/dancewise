@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
-    <%= link_to "DANCEWISE", root_path, class: "navbar-brand", id: "logo" %>
+    <%= link_to image_tag("sitenavlogo-small.png"), root_path, class: "navbar-brand site-nav-logo", id: "logo" %>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -11,7 +11,7 @@
             Events
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <%= link_to "Suggest a new event", suggest_event_path, class: "dropdown-item" %>
+              <%= link_to "Add a new event", suggest_event_path, class: "dropdown-item" %>
             <% if logged_in? && current_user.admin? %>
               <%= link_to "Create event as admin", new_event_path, class: "dropdown-item" %>
             <% end %>
@@ -34,7 +34,7 @@
             Artists
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <%= link_to "Suggest a new artist", suggest_artist_path, class: "dropdown-item" %>
+              <%= link_to "Add a new artist", suggest_artist_path, class: "dropdown-item" %>
             <% if logged_in? && current_user.admin? %>
               <%= link_to "Create artist as admin", new_artist_path, class: "dropdown-item" %>
             <% end %>

@@ -1,4 +1,5 @@
 <div class="form-style">
+<div class="required-form">
   <%= bootstrap_form_for(@event, data: { controller: "places", action: "google-maps-callback@window->places#initMap" }) do |f| %>
     <%= f.text_field :name, placeholder: 'Enter the name of the event here', label: "What is the name of this event?" %>
     <%= f.rich_text_area :description, placeholder: 'Enter the description of the event here', label: "Tell us about the event." %>
@@ -15,6 +16,8 @@
              help: "Select the artists that will be represented in the classes and/or socials."}, 
           { multiple: true, id: "select-artist" } %>
     <%= f.date_field :event_start_date, wrapper: { class: "date"}, label: "What date does this event start?", required: true %>
+    </div>
+    
     <%= f.date_field :event_end_date, wrapper: { class: "date"}, label: "What date does this event end?", help: "Enter the same date if this is a same day event." %>
     <%= f.text_field :website_url, label: "Event Website Link", placeholder: 'http://www.yourevent.com', label: "Does this event have a website?", help: "If the event has a website, enter the link here." %>
     <%= f.text_field :ticket_url, label: "Passes Link", placeholder: 'http://yourticketsite.com/yourevent', label: "What is the link to purchase passes?", help: "If the event has a direct link to purchase passes, enter the link here." %>
