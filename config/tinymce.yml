@@ -1,0 +1,6 @@
+height: 500
+menubar: false
+toolbar:
+  - undo redo | bold italic underline | forecolor |bullist outdent indent | link | 
+plugins:
+  - lists media table code help wordcount link

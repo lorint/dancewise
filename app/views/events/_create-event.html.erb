@@ -3,7 +3,8 @@
   <%= bootstrap_form_for(@event, data: { controller: "places", action: "google-maps-callback@window->places#initMap" }) do |f| %>
     <%= f.text_field :name, placeholder: 'Enter the name of the event here', label: "What is the name of this event?" %>
    <%= f.text_area :description, placeholder: 'Enter the description of the event here', label: "Tell us about the event.", :class => "tinymce" %>
-    <%= f.text_field :address, data: { target: "places.field" }, label: "Where is this event taking place?", required: true %>
+   <%= tinymce %>
+    <%= f.text_field :address, data: { places_target: "field" }, label: "Where is this event taking place?", required: true %>
     <%= f.collection_select :event_type_id, EventType.all, :id, :name, label: "What type of event is this?" %>
     <div class="field" data-controller="select">
       <%= f.select :dance_style_ids, DanceStyle.all.pluck(:name, :id), 

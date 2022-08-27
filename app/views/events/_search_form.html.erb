@@ -5,7 +5,7 @@
     <%= f.search_field :name_cont, placeholder: "Any event", class: "form-control" %>
      <br>
     <%= f.label "Geolocation", class: "form-label" %>
-    <%= f.search_field :address_or_city_or_state_or_country_or_continent_cont_all, class: "form-control", placeholder: "Search by continent, country, state/province/region, or city", data: { target: "places.field" } %>
+    <%= f.search_field :address_or_city_or_state_or_country_or_continent_cont_all, class: "form-control", placeholder: "Search by continent, country, state/province/region, or city", data: { places_target: "field" } %>
     <br>
     <%= f.label "Dance style", class: "form-label" %>
     <%= f.select :dance_styles_id_eq, DanceStyle.all.pluck(:name, :id), { :include_blank => "All dance styles" }, { class: "form-select", id: "select-dancestyle", placeholder: "Any dance style" } %>

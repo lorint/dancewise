@@ -41,6 +41,7 @@ gem 'cssbundling-rails'
 gem 'stimulus-rails'
 gem 'turbo-rails'
 gem 'turbolinks', '~> 5.2.0'
+gem 'tinymce-rails'
 
 
 group :development, :test do
