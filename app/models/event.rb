@@ -11,6 +11,7 @@ class Event < ApplicationRecord
   has_many :event_artists
   has_many :artists, through: :event_artists
   has_one_attached :event_image
+  has_rich_text :description
   belongs_to :event_type, optional: true, class_name: "EventType", foreign_key: "event_type_id"
   belongs_to :event_frequency, optional: true, class_name: "EventFrequency", foreign_key: "event_frequency_id"
   belongs_to :event_status, optional: true, class_name: "EventStatus", foreign_key: "event_status_id"
