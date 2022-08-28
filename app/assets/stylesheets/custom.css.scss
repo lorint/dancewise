@@ -412,9 +412,9 @@ p.help-text {
 }
 
 .formlook {
-  
-  input[type=text], select {
-    font-size: .8rem;
+  input[type='text'],
+  select {
+    font-size: 0.8rem;
     color: #565656;
   }
 
@@ -423,9 +423,7 @@ p.help-text {
   }
 
   ::placeholder {
-    font-size: .8rem;
+    font-size: 0.8rem;
     color: #565656;
   }
-
-
 }
