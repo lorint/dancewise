@@ -87,4 +87,4 @@ end
 
 gem "importmap-rails", "~> 1.1"
 
-gem "hotwire-livereload", "~> 1.2", :group => :development
+gem "rails_live_reload"

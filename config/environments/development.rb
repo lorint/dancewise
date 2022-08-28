@@ -18,10 +18,6 @@ Rails.application.configure do
   config.server_timing = true
 
 
-  config.hotwire_livereload.listen_paths << Rails.root.join("app/assets/stylesheets")
-  config.hotwire_livereload.force_reload_paths << Rails.root.join("app/assets/stylesheets")
-  config.hotwire_livereload.force_reload_paths << Rails.root.join("app/javascript")
-
 
   # Enable/disable caching. By default caching is disabled.
   # Run rails dev:cache to toggle caching.

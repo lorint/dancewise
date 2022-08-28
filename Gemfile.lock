@@ -127,9 +127,6 @@ GEM
     geocoder (1.8.0)
     globalid (1.0.0)
       activesupport (>= 5.0)
-    hotwire-livereload (1.2.2)
-      listen (>= 3.0.0)
-      rails (>= 6.0.0)
     i18n (1.12.0)
       concurrent-ruby (~> 1.0)
     importmap-rails (1.1.5)
@@ -177,8 +174,6 @@ GEM
     nio4r (2.5.8)
     nokogiri (1.13.8-x86_64-darwin)
       racc (~> 1.4)
-    nokogiri (1.13.8-x86_64-linux)
-      racc (~> 1.4)
     parallel (1.22.1)
     parser (3.1.2.1)
       ast (~> 2.4.1)
@@ -215,6 +210,11 @@ GEM
       nokogiri (>= 1.6)
     rails-html-sanitizer (1.4.3)
       loofah (~> 2.3)
+    rails_live_reload (0.3.0)
+      listen
+      nio4r
+      railties
+      websocket-driver
     railties (7.0.3.1)
       actionpack (= 7.0.3.1)
       activesupport (= 7.0.3.1)
@@ -246,7 +246,7 @@ GEM
       unicode-display_width (>= 1.4.0, < 3.0)
     rubocop-ast (1.21.0)
       parser (>= 3.1.1.0)
-    rubocop-minitest (0.21.0)
+    rubocop-minitest (0.21.1)
       rubocop (>= 0.90, < 2.0)
     rubocop-packaging (0.5.2)
       rubocop (>= 1.33, < 2.0)
@@ -318,7 +318,6 @@ GEM
 
 PLATFORMS
   x86_64-darwin-20
-  x86_64-linux
 
 DEPENDENCIES
   aws-sdk-s3
@@ -333,7 +332,6 @@ DEPENDENCIES
   figaro
   filterrific
   geocoder
-  hotwire-livereload (~> 1.2)
   importmap-rails (~> 1.1)
   jbuilder (~> 2.7)
   jquery-rails
@@ -345,6 +343,7 @@ DEPENDENCIES
   puma (~> 5.0)
   rack-mini-profiler (~> 2.0)
   rails (~> 7.0.3)
+  rails_live_reload
   ransack
   redis (~> 4.0)
   rubocop

@@ -1,6 +1,6 @@
 <%= search_form_for @q,  
     data: { controller: "places", action: "google-maps-callback@window->places#initMap" } do |f| %>
-
+    <div class="formlook">
     <%= f.label "Event name", class: "form-label" %>
     <%= f.search_field :name_cont, placeholder: "Any event", class: "form-control" %>
      <br>
@@ -19,6 +19,7 @@
      <%= f.label "Year", class: "form-label" %>
     <%= f.select :event_year_eq, Date.today.year-2 .. Date.today.year+3, { prompt: "Any year" }, {:placeholder => 'Select Year', include_blank: true, class: "form-select"}  %>
      <br>
+     </div>
     <%= f.submit "Search!", class: "btn btn-dark btn-lg" %>
 <% end %>
 

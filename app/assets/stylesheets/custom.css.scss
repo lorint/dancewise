@@ -410,3 +410,22 @@ p.help-text {
     width: 20%;
   }
 }
+
+.formlook {
+  
+  input[type=text], select {
+    font-size: .8rem;
+    color: #565656;
+  }
+
+  label {
+    color: #171717;
+  }
+
+  ::placeholder {
+    font-size: .8rem;
+    color: #565656;
+  }
+
+
+}

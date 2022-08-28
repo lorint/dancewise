@@ -11,7 +11,7 @@ module Dancewise
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.1
 
-    config.assets.precompile += ['/app/assets/stylesheets/custom.css.scss'] 
+  
 
     config.assets.paths << Rails.root.join('app', 'assets')
 
