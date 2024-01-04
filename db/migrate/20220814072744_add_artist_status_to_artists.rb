@@ -1,4 +1,4 @@
-class AddArtistStatusToArtists < ActiveRecord::Migration[6.1]
+class AddArtistStatusToArtists < ActiveRecord::Migration[7.1]
   def change
     create_table :artist_status do |t|
       t.string :status

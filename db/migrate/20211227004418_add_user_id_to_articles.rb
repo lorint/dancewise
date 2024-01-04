@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class AddUserIdToArticles < ActiveRecord::Migration[6.1]
+class AddUserIdToArticles < ActiveRecord::Migration[7.1]
   def change
     add_column :articles, :user_id, :int
   end

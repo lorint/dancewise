@@ -1,4 +1,4 @@
-class AddColumnsForSocialMediaToEvents < ActiveRecord::Migration[6.1]
+class AddColumnsForSocialMediaToEvents < ActiveRecord::Migration[7.1]
   def change
       add_column :events, :website_url, :string
       add_column :events, :facebook_url, :string

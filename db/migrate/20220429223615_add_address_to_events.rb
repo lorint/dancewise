@@ -1,4 +1,4 @@
-class AddAddressToEvents < ActiveRecord::Migration[6.1]
+class AddAddressToEvents < ActiveRecord::Migration[7.1]
   def change
     add_column :events, :address, :string
     add_column :events, :latitude, :float

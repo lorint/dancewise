@@ -1,4 +1,4 @@
-class AddEndDateToEvents < ActiveRecord::Migration[6.1]
+class AddEndDateToEvents < ActiveRecord::Migration[7.1]
   def change
     add_column :events, :event_end_date, :datetime
     rename_column :events, :event_date, :event_start_date

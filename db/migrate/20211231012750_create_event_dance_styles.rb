@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class CreateEventDanceStyles < ActiveRecord::Migration[6.1]
+class CreateEventDanceStyles < ActiveRecord::Migration[7.1]
   def change
     create_table :event_dance_styles do |t|
       t.integer :dance_style_id

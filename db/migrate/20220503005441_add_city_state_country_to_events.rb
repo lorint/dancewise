@@ -1,4 +1,4 @@
-class AddCityStateCountryToEvents < ActiveRecord::Migration[6.1]
+class AddCityStateCountryToEvents < ActiveRecord::Migration[7.1]
   def change
     add_column :events, :city, :string
     add_column :events, :state, :string

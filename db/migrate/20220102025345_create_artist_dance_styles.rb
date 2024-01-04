@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class CreateArtistDanceStyles < ActiveRecord::Migration[6.1]
+class CreateArtistDanceStyles < ActiveRecord::Migration[7.1]
   def change
     create_table :artist_dance_styles do |t|
       t.integer :artist_id
