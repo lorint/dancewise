@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require "test_helper"
 
 class EventStatusesControllerTest < ActionDispatch::IntegrationTest
@@ -16,7 +18,7 @@ class EventStatusesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should create event_status" do
-    assert_difference('EventStatus.count') do
+    assert_difference("EventStatus.count") do
       post event_statuses_url, params: { event_status: { event_id: @event_status.event_id, status: @event_status.status } }
     end
 
@@ -39,7 +41,7 @@ class EventStatusesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should destroy event_status" do
-    assert_difference('EventStatus.count', -1) do
+    assert_difference("EventStatus.count", -1) do
       delete event_status_url(@event_status)
     end
 

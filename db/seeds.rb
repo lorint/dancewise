@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
 #
@@ -7,7 +8,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-require 'faker'
+require "faker"
 
 # Users, Dance Styles, Artists, Events, Event Types, Event Frequencies
 
@@ -21,26 +22,26 @@ EventFrequency.destroy_all
 # USER CREATION
 
 User.create(
-    username: "ogarocious", 
-    email:"ogarocious@me.com", 
-    password:"password", 
-    admin:true
-)
+    username: "ogarocious",
+    email: "ogarocious@me.com",
+    password: "password",
+    admin: true
+  )
 
 User.create(
-    username: "melchua", 
-    email: "mchuam@gmail.com", 
-    password:"password", 
-    admin:true
-)
+    username: "melchua",
+    email: "mchuam@gmail.com",
+    password: "password",
+    admin: true
+  )
 
 4.times do
-    user = User.new(
-        username: Faker::Name.name,
-        email: Faker::Internet.email,
-        password: "password"
+  user = User.new(
+      username: Faker::Name.name,
+      email: Faker::Internet.email,
+      password: "password"
     )
-    user.save
+  user.save
 end
 
 # DANCE STYLE CREATION
@@ -90,9 +91,9 @@ Event.create(
     image_url: "imageplaceholder123456",
     event_type_id: rand(1..7),
     event_frequency_id: rand(1..5),
-    event_start_date: Faker::Date.between(from: '2021-01-02', to: '2023-12-24'),
+    event_start_date: Faker::Date.between(from: "2021-01-02", to: "2023-12-24"),
     address: "The Underground Dance Centre, Richmond Street West, Toronto, ON, Canada"
-)
+  )
 
 EventDanceStyle.create(event_id: 1, dance_style_id: 1)
 
@@ -103,9 +104,9 @@ Event.create(
     image_url: "imageplaceholder123456",
     event_type_id: rand(1..7),
     event_frequency_id: rand(1..5),
-    event_start_date: Faker::Date.between(from: '2021-01-02', to: '2023-12-24'),
+    event_start_date: Faker::Date.between(from: "2021-01-02", to: "2023-12-24"),
     address: "Urbanity Dance, Harrison Avenue, Boston, MA, USA"
-)
+  )
 
 EventDanceStyle.create(event_id: 8, dance_style_id: 5)
 
@@ -116,9 +117,9 @@ Event.create(
     image_url: "imageplaceholder123456",
     event_type_id: rand(1..7),
     event_frequency_id: rand(1..5),
-    event_start_date: Faker::Date.between(from: '2021-01-02', to: '2023-12-24'),
+    event_start_date: Faker::Date.between(from: "2021-01-02", to: "2023-12-24"),
     address: "The Harlem Swing Dance Society, West 134th Street, New York, NY, USA"
-)
+  )
 
 EventDanceStyle.create(event_id: 7, dance_style_id: 4)
 
@@ -129,9 +130,9 @@ Event.create(
     image_url: "imageplaceholder123456",
     event_type_id: rand(1..7),
     event_frequency_id: rand(1..5),
-    event_start_date: Faker::Date.between(from: '2021-01-02', to: '2023-12-24'),
+    event_start_date: Faker::Date.between(from: "2021-01-02", to: "2023-12-24"),
     address: "Springfield Dance, International Parkway, Springfield, IL, USA"
-)
+  )
 
 EventDanceStyle.create(event_id: 7, dance_style_id: 12)
 
@@ -142,9 +143,9 @@ Event.create(
     image_url: "imageplaceholder123456",
     event_type_id: rand(1..7),
     event_frequency_id: rand(1..5),
-    event_start_date: Faker::Date.between(from: '2021-01-02', to: '2023-12-24'),
+    event_start_date: Faker::Date.between(from: "2021-01-02", to: "2023-12-24"),
     address: "Gary Geis School of Dance, East Main Street, Springfield, OH, USA"
-)
+  )
 
 EventDanceStyle.create(event_id: 7, dance_style_id: 4)
 
@@ -155,9 +156,9 @@ Event.create(
     image_url: "imageplaceholder123456",
     event_type_id: rand(1..7),
     event_frequency_id: rand(1..5),
-    event_start_date: Faker::Date.between(from: '2021-01-02', to: '2023-12-24'),
+    event_start_date: Faker::Date.between(from: "2021-01-02", to: "2023-12-24"),
     address: "460 Main St, Winnipeg, Manitoba, Canada"
-)
+  )
 
 EventDanceStyle.create(event_id: 7, dance_style_id: 12)
 
@@ -170,9 +171,9 @@ Event.create(
     image_url: "imageplaceholder123456",
     event_type_id: rand(1..7),
     event_frequency_id: rand(1..5),
-    event_start_date: Faker::Date.between(from: '2021-01-02', to: '2023-12-24'),
+    event_start_date: Faker::Date.between(from: "2021-01-02", to: "2023-12-24"),
     address: "Salsa Classes Medellin, Cra 80, Medellin, Antioquia, Colombia"
-)
+  )
 
 EventDanceStyle.create(event_id: 4, dance_style_id: 8)
 
@@ -186,9 +187,9 @@ Event.create(
     image_url: "imageplaceholder123456",
     event_type_id: rand(1..7),
     event_frequency_id: rand(1..5),
-    event_start_date: Faker::Date.between(from: '2021-01-02', to: '2023-12-24'),
+    event_start_date: Faker::Date.between(from: "2021-01-02", to: "2023-12-24"),
     address: "The Real Dance Studio, North Lotts, North City, Dublin, Ireland"
-)
+  )
 
 EventDanceStyle.create(event_id: 3, dance_style_id: 2)
 
@@ -199,9 +200,9 @@ Event.create(
     image_url: "imageplaceholder123456",
     event_type_id: rand(1..7),
     event_frequency_id: rand(1..5),
-    event_start_date: Faker::Date.between(from: '2021-01-02', to: '2023-12-24'),
+    event_start_date: Faker::Date.between(from: "2021-01-02", to: "2023-12-24"),
     address: "Studio Harmonic, Passage des Taillandiers, Paris, France"
-)
+  )
 
 EventDanceStyle.create(event_id: 5, dance_style_id: 15)
 
@@ -212,9 +213,9 @@ Event.create(
     image_url: "imageplaceholder123456",
     event_type_id: rand(1..7),
     event_frequency_id: rand(1..5),
-    event_start_date: Faker::Date.between(from: '2021-01-02', to: '2023-12-24'),
+    event_start_date: Faker::Date.between(from: "2021-01-02", to: "2023-12-24"),
     address: "Amsterdam Dance Center, Marnixstraat, Amsterdam, Netherlands"
-)
+  )
 
 EventDanceStyle.create(event_id: 6, dance_style_id: 7)
 
@@ -227,9 +228,9 @@ Event.create(
     image_url: "imageplaceholder123456",
     event_type_id: rand(1..7),
     event_frequency_id: rand(1..5),
-    event_start_date: Faker::Date.between(from: '20 21-01-02', to: '2023-12-24'),
+    event_start_date: Faker::Date.between(from: "20 21-01-02", to: "2023-12-24"),
     address: "Palais de Danse Dance Studio Dubai - 6A Street - Dubai - United Arab Emirates"
-)
+  )
 
 EventDanceStyle.create(event_id: 2, dance_style_id: 6)
 
@@ -240,9 +241,9 @@ Event.create(
     image_url: "imageplaceholder123456",
     event_type_id: rand(1..7),
     event_frequency_id: rand(1..5),
-    event_start_date: Faker::Date.between(from: '2021-01-02', to: '2023-12-24'),
+    event_start_date: Faker::Date.between(from: "2021-01-02", to: "2023-12-24"),
     address: "The Real Dance Studio, North Lotts, North City, Dublin, Ireland"
-)
+  )
 
 EventDanceStyle.create(event_id: 3, dance_style_id: 2)
 
@@ -276,14 +277,14 @@ EventDanceStyle.create(event_id: 3, dance_style_id: 2)
 
 
 
-# ARTIST CREATION 
+# ARTIST CREATION
 
 Artist.create(
     name: "Charles Ogar",
     description: "Urbankiz Instructor Based in Texas",
     image_url: "imageplaceholder123456",
     instructor: true
-)
+  )
 
 ArtistDanceStyle.create(artist_id: 1, dance_style_id: 7)
 EventArtist.create(artist_id: 1, event_id: 6)
@@ -293,7 +294,7 @@ Artist.create(
     description: "Lindy Hop Instructor Based in Texas",
     image_url: "imageplaceholder123456",
     instructor: true
-)
+  )
 
 ArtistDanceStyle.create(artist_id: 2, dance_style_id: 4)
 EventArtist.create(artist_id: 2, event_id: 7)
@@ -303,7 +304,7 @@ Artist.create(
     description: "Salsa Instructor Based in Cuba",
     image_url: "imageplaceholder123456",
     instructor: true
-)
+  )
 
 ArtistDanceStyle.create(artist_id: 3, dance_style_id: 1)
 EventArtist.create(artist_id: 3, event_id: 1)
@@ -314,7 +315,7 @@ Artist.create(
     description: "Bachata Instructor Based in Florida",
     image_url: "imageplaceholder123456",
     instructor: true
-)
+  )
 
 ArtistDanceStyle.create(artist_id: 4, dance_style_id: 2)
 EventArtist.create(artist_id: 4, event_id: 3)
@@ -325,7 +326,7 @@ Artist.create(
     description: "Brazilian Zouk Instructor Based in DC",
     image_url: "imageplaceholder123456",
     instructor: true
-)
+  )
 
 ArtistDanceStyle.create(artist_id: 5, dance_style_id: 15)
 EventArtist.create(artist_id: 5, event_id: 5)
@@ -335,7 +336,7 @@ Artist.create(
     description: "Fusion Instructor Based in Dallas",
     image_url: "imageplaceholder123456",
     instructor: true
-)
+  )
 
 ArtistDanceStyle.create(artist_id: 6, dance_style_id: 8)
 EventArtist.create(artist_id: 6, event_id: 4)
@@ -345,7 +346,7 @@ Artist.create(
     description: "West Coast Swing Instructor Based in Seattle",
     image_url: "imageplaceholder123456",
     instructor: true
-)
+  )
 
 ArtistDanceStyle.create(artist_id: 7, dance_style_id: 5)
 EventArtist.create(artist_id: 7, event_id: 8)
@@ -355,7 +356,7 @@ Artist.create(
     description: "Tango Instructor Based in Los Angeles",
     image_url: "imageplaceholder123456",
     instructor: true
-)
+  )
 
 ArtistDanceStyle.create(artist_id: 8, dance_style_id: 6)
 EventArtist.create(artist_id: 8, event_id: 2)

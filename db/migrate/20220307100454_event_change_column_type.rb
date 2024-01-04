@@ -2,6 +2,6 @@
 
 class EventChangeColumnType < ActiveRecord::Migration[7.1]
   def change
-    change_column_null(:events, :event_frequency_id, false, default = 1)
+    change_column_null(:events, :event_frequency_id, false, 1)
   end
 end

@@ -5,19 +5,19 @@ Rails.application.routes.draw do
   resources :event_statuses
   resources :event_frequencies
   resources :event_statuses
-  root 'pages#home'
-  get 'about', to: 'pages#about'
+  root "pages#home"
+  get "about", to: "pages#about"
   resources :articles # , only: [:show, :index, :new, :create, :edit, :update, :destroy]
-  get 'signup', to: 'users#new'
+  get "signup", to: "users#new"
   # post 'users', to: 'users#create'
   resources :users, except: [:new]
   resources :events
-  get '/suggest_event', to: 'events#suggest_event', as: 'suggest_event'
-  get '/suggest_artist', to: 'artists#suggest_artist', as: 'suggest_artist'
-  get 'login', to: 'sessions#new'
-  get '/logout', to: 'sessions#destroy', as: 'logout'
-  post 'login', to: 'sessions#create'
-  delete 'logout', to: 'sessions#destroy'
+  get "/suggest_event", to: "events#suggest_event", as: "suggest_event"
+  get "/suggest_artist", to: "artists#suggest_artist", as: "suggest_artist"
+  get "login", to: "sessions#new"
+  get "/logout", to: "sessions#destroy", as: "logout"
+  post "login", to: "sessions#create"
+  delete "logout", to: "sessions#destroy"
   resources :dance_styles, except: [:destroy]
   resources :artists
   resources :event_types

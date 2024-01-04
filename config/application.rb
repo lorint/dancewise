@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative "boot"
 
 require "rails/all"
@@ -11,7 +13,7 @@ module Dancewise
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.1
 
-    config.assets.paths << Rails.root.join('app', 'assets')
+    config.assets.paths << Rails.root.join("app", "assets")
 
     Dir.glob("#{Rails.root}/app/assets/images/**/").each do |path|
       config.assets.paths << path

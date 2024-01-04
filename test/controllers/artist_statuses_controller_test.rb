@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require "test_helper"
 
 class ArtistStatusesControllerTest < ActionDispatch::IntegrationTest
@@ -16,7 +18,7 @@ class ArtistStatusesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should create artist_status" do
-    assert_difference('ArtistStatus.count') do
+    assert_difference("ArtistStatus.count") do
       post artist_statuses_url, params: { artist_status: { artist_id: @artist_status.artist_id, status: @artist_status.status } }
     end
 
@@ -39,7 +41,7 @@ class ArtistStatusesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should destroy artist_status" do
-    assert_difference('ArtistStatus.count', -1) do
+    assert_difference("ArtistStatus.count", -1) do
       delete artist_status_url(@artist_status)
     end
 
