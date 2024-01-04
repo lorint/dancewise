@@ -11,8 +11,6 @@ module Dancewise
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.1
 
-  
-
     config.assets.paths << Rails.root.join('app', 'assets')
 
     Dir.glob("#{Rails.root}/app/assets/images/**/").each do |path|
